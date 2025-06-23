@@ -62,7 +62,7 @@ class RecipeView extends View {
               </button>
             </div>
           </div>
-          <button class="btn--round${this._data.bookmarked ? '' : '-fill' } btn--bookmark">
+          <button class="btn--rectangle${this._data.bookmarked ? '-fill' : '' } btn--bookmark">
             <span>🔖🔖🔖</span>
           </button>
         </div>
@@ -73,7 +73,7 @@ class RecipeView extends View {
             ${this._data.ingredients.map(ingredient => {
                   return `
               <li class="recipe__ingredient">
-              <span>✓</span>
+              <span>✓ </span>
               <div class="recipe__quantity">${ingredient.quantity ? new Fraction(ingredient.quantity).toFraction() : '' }</div>
               <div class="recipe__description">
                 <span class="recipe__unit">${ingredient.unit ? ingredient.unit : ''}</span>

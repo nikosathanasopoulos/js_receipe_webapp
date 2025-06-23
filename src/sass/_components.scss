@@ -89,6 +89,13 @@
     outline: none;
   }
 }
+.btn--rectangle {
+
+}
+
+.btn--rectangle-fill {
+  background-color: orange;
+}
 
 .btn--round {
   background-image: $gradient;

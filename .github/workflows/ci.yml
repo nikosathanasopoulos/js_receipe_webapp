@@ -24,11 +24,10 @@ jobs:
       - name: Build WebApp
         run: npm run build
 
-      - name: Sleep for 30 seconds waiting for html report
-        if: always()
-        uses: jakejarvis/wait-action@master
-        with:
-          time: '30s'
+      - name: test
+        run: |
+          pwd
+          ls ./dist
 
       - name: Publish recipe webapp
         uses: peaceiris/actions-gh-pages@v3

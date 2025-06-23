@@ -1,0 +1,9 @@
+**/.env
+node_modules/
+out/
+**/.dockerignore
+**/.vscode
+**/.DS_Store
+**/logs/
+**/.idea/
+**/dist/

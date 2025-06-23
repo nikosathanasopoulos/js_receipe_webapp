@@ -1,0 +1,39 @@
+name: Deploy recipe webapp in github pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.12.0'
+
+      - name: Install npm packages
+        run: npm install
+
+      - name: Build WebApp
+        run: npm run start
+
+      - name: Sleep for 30 seconds waiting for html report
+        if: always()
+        uses: jakejarvis/wait-action@master
+        with:
+          time: '30s'
+
+      - name: Publish recipe webapp
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist

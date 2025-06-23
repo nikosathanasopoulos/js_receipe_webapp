@@ -1,0 +1,19 @@
+{
+  "name": "recipe_app",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Nikolaos Athanasopoulos",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.15.2",
+    "parcel": "^2.15.2"
+  },
+  "dependencies": {
+    "core-js": "^3.43.0",
+    "fraction.js": "^5.2.2",
+    "regenerator-runtime": "^0.14.1"
+  }
+}

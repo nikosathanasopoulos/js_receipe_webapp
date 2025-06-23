@@ -41,14 +41,14 @@ class RecipeView extends View {
         <div class="recipe__details">
           <div class="recipe__info">
             <svg class="recipe__info-icon">
-              <use href="${icons}#icon-clock"></use>
+              <span>🕥 </span>
             </svg>
             <span class="recipe__info-data recipe__info-data--minutes">${this._data.cookingTime}</span>
             <span class="recipe__info-text">minutes</span>
           </div>
           <div class="recipe__info">
             <svg class="recipe__info-icon">
-              <use href="${icons}#icon-users"></use>
+              <span>🍛 </span>
             </svg>
             <span class="recipe__info-data recipe__info-data--people">${this._data.servings}</span>
             <span class="recipe__info-text">servings</span>
@@ -62,12 +62,16 @@ class RecipeView extends View {
               </button>
             </div>
           </div>
-          <button class="btn--rectangle${this._data.bookmarked ? '-fill' : '' } btn--bookmark">
-            <span>🔖🔖🔖</span>
-          </button>
+          <div class="recipe__info"> </div>
+          <div class="recipe__info"> </div>
+          <div class="recipe__info">
+            <button class="btn--rectangle${this._data.bookmarked ? '-fill' : '' } btn--bookmark">
+                <span>🔖🔖🔖</span>
+            </button>
+          </div>
         </div>
 
-        <class="recipe__ingredients">
+        <div class="recipe__ingredients">
           <h2 class="heading--2">Recipe ingredients</h2>
           <ul class="recipe__ingredient-list">
             ${this._data.ingredients.map(ingredient => {

@@ -66,7 +66,7 @@ class RecipeView extends View {
           <div class="recipe__info"> </div>
           <div class="recipe__info">
             <button class="btn--rectangle${this._data.bookmarked ? '-fill' : '' } btn--bookmark">
-                <span>🔖 Bookmark${this._data.bookmarked ? 'ed' : '' }</span>
+                <span>Bookmark${this._data.bookmarked ? 'ed' : '' }</span>
             </button>
           </div>
         </div>

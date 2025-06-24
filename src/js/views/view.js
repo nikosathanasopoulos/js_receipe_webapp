@@ -19,9 +19,7 @@ export default class View {
       renderSpinner() {
             const markup = `
             <div class="spinner">
-                <svg>
-                <use href="${icons}#icon-loader"></use>
-                </svg>
+                <span>Loading ...</span>
             </div>
             `;
             this._clear();
